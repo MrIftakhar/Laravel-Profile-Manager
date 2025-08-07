@@ -14,8 +14,13 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'bio' => 'required',
+            'hobbies' => 'required',
+            'date_of_birth' => 'required',
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
@@ -26,8 +31,13 @@ class TaskController extends Controller
 
         Task::create([
             'user_id' => auth()->id(),
-            'title' => $request->title,
-            'description' => $request->description,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'bio' => $request->bio,
+            'hobbies' => $request->hobbies,
+            'date_of_birth' => $request->date_of_birth,
             'image_path' => $path,
         ]);
 
@@ -45,9 +55,14 @@ class TaskController extends Controller
         $task = Task::where('id', $id)->where('user_id', auth()->id())->firstOrFail();
 
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'bio' => 'required',
+            'hobbies' => 'required',
+            'date_of_birth' => 'required',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
         $path = $task->image_path;
@@ -57,8 +72,13 @@ class TaskController extends Controller
         }
 
         $task->update([
-            'title' => $request->title,
-            'description' => $request->description,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'bio' => $request->bio,
+            'hobbies' => $request->hobbies,
+            'date_of_birth' => $request->date_of_birth,
             'image_path' => $path,
         ]);
 
