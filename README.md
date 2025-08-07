@@ -1,6 +1,6 @@
-# 🗂️ Laravel Task Manager with Authentication, Tailwind CSS & Image Upload
+# 🗂️ Laravel Profile Manager with Authentication, Tailwind CSS & Image Upload
 
-This is a simple Task Management Web Application built with **Laravel**, **MySQL**, and **Tailwind CSS**. It features **user authentication**, a secure **dashboard**, and the ability to **create tasks with image uploads**.
+This is a simple Task Management Web Application built with **Laravel**, **MySQL**, and **Tailwind CSS**. It features **user authentication**, a secure **dashboard**, and the ability to **create profile with image uploads**.
 
 ---
 
@@ -8,8 +8,8 @@ This is a simple Task Management Web Application built with **Laravel**, **MySQL
 
 - 🧑‍💼 User Registration and Login (with name, email, password)
 - 🔐 Authenticated Dashboard (protected via middleware)
-- 📝 Create and View Tasks
-- 🖼️ Upload and display task images
+- 📝 Create and View profiles
+- 🖼️ Upload and display images
 - 🎨 Clean and responsive UI using Tailwind CSS
 - 📦 Store images using Laravel's storage system
 - 🔓 Logout functionality
@@ -40,8 +40,8 @@ This is a simple Task Management Web Application built with **Laravel**, **MySQL
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/task-manager-laravel.git
-cd task-manager-laravel
+git clone https://github.com/MrIftakhar/Laravel-Profile-Manager.git
+cd Laravel-Profile-Manager
 
 # 2. Install PHP dependencies
 composer install
@@ -68,4 +68,4 @@ php artisan storage:link
 
 # 10. Serve the application
 php artisan serve
-# Laravel-Task-Manager
+# Laravel-Profile-Manager
