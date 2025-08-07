@@ -4,52 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="flex justify-center bg-gray-500">
+<body class="bg-secondary d-flex justify-content-center align-items-center min-vh-100">
 
-    <div class="bg-blue-100 p-8 rounded shadow-md w-full max-w-2xl text-center">
-        <h2 class="text-3xl text-green-400 font-semibold mb-6">Edit File</h2>
+    <div class="p-5 rounded shadow w-100" style="max-width: 720px; background-color: #a87bb5;">
+        <h2 class="text-success text-center fw-semibold mb-4">Edit File</h2>
 
-        <form method="POST" action="{{ route('tasks.update', $task->id) }}" enctype="multipart/form-data" class="space-y-4 text-left">
+        <form method="POST" action="{{ route('tasks.update', $task->id) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
-            <label class="block font-semibold">Name</label>
-            <input name="name" value="{{ $task->name }}" required class="w-full p-2 border border-gray-300 rounded">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Name</label>
+                <input name="name" value="{{ $task->name }}" required class="form-control">
+            </div>
 
-            <label class="block font-semibold">Email</label>
-            <input name="email" type="email" value="{{ $task->email }}" required class="w-full p-2 border border-gray-300 rounded">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Email</label>
+                <input name="email" type="email" value="{{ $task->email }}" required class="form-control">
+            </div>
 
-            <label class="block font-semibold">Phone</label>
-            <input name="phone" value="{{ $task->phone }}" required class="w-full p-2 border border-gray-300 rounded">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Phone</label>
+                <input name="phone" value="{{ $task->phone }}" required class="form-control">
+            </div>
 
-            <label class="block font-semibold">Address</label>
-            <input name="address" value="{{ $task->address }}" required class="w-full p-2 border border-gray-300 rounded">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Address</label>
+                <input name="address" value="{{ $task->address }}" required class="form-control">
+            </div>
 
-            <label class="block font-semibold">Bio</label>
-            <textarea name="bio" required class="w-full p-2 border border-gray-300 rounded">{{ $task->bio }}</textarea>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Bio</label>
+                <textarea name="bio" required class="form-control" rows="3">{{ $task->bio }}</textarea>
+            </div>
 
-            <label class="block font-semibold">Hobbies</label>
-            <input name="hobbies" value="{{ $task->hobbies }}" required class="w-full p-2 border border-gray-300 rounded">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Hobbies</label>
+                <input name="hobbies" value="{{ $task->hobbies }}" required class="form-control">
+            </div>
 
-            <label class="block font-semibold">Date of Birth</label>
-            <input type="date" name="date_of_birth" value="{{ $task->date_of_birth }}" required class="w-full p-2 border border-gray-300 rounded">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Date of Birth</label>
+                <input type="date" name="date_of_birth" value="{{ $task->date_of_birth }}" required class="form-control">
+            </div>
 
-            <label class="block font-semibold">Upload Image</label>
-            <input type="file" name="image" class="w-full">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Upload Image</label>
+                <input type="file" name="image" class="form-control">
+            </div>
 
             @if($task->image_path)
-                <div>
-                    <p class="mb-2 font-semibold">Current Image:</p>
-                    <img src="{{ asset('storage/' . $task->image_path) }}" width="100" class="mx-auto rounded">
+                <div class="mb-3 text-center">
+                    <p class="fw-semibold mb-2">Current Image:</p>
+                    <img src="{{ asset('storage/' . $task->image_path) }}" width="100" class="rounded img-thumbnail">
                 </div>
             @endif
 
-            <button type="submit"
-                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">Update File</button>
+            <button type="submit" class="btn btn-primary w-100">Update File</button>
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
