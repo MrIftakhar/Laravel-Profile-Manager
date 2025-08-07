@@ -5,41 +5,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-gray-700">
+<body class="bg-dark d-flex justify-content-center align-items-center min-vh-100">
+
   <form method="POST" action="{{ route('register') }}"
-    class="bg-purple-500 p-8 rounded-lg shadow-md w-full max-w-sm space-y-4">
-    <h1 class="flex items-center justify-center text-4xl text-black">Registration</h1>
+    class="bg-secondary text-black p-5 rounded shadow w-100" style="max-width: 400px;">
+
+    <h1 class="text-center text-black fw-bold mb-4">Registration</h1>
 
     @csrf
 
-    <label>Name
-      <input name="name" placeholder="Name" required
-        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-    </label>
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input name="name" placeholder="Name" required class="form-control" />
+    </div>
 
-    <label>Email
-      <input name="email" type="email" placeholder="Email" required
-        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-    </label>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input name="email" type="email" placeholder="Email" required class="form-control" />
+    </div>
 
-    <label>Password
-      <input name="password" type="password" placeholder="Password" required
-        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-    </label>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input name="password" type="password" placeholder="Password" required class="form-control" />
+    </div>
 
-    <label>Confirm Password
-      <input name="password_confirmation" type="password" placeholder="Confirm Password" required
-        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-    </label>
+    <div class="mb-4">
+      <label class="form-label">Confirm Password</label>
+      <input name="password_confirmation" type="password" placeholder="Confirm Password" required class="form-control" />
+    </div>
 
-    <button type="submit"
-      class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200 border border-blue-600">
+    <button type="submit" class="btn btn-outline-light bg-primary text-white w-100">
       Register
     </button>
   </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

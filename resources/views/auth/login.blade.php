@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-400">
-    <form method="POST" action="{{ route('login') }}" class="bg-purple-300 p-8 rounded-lg shadow-md w-full max-w-sm space-y-4">
-        <h1 class="flex items-center justify-center text-4xl text-red-600">Log In</h1>
+<body class="bg-secondary d-flex justify-content-center align-items-center min-vh-100">
+
+    <form method="POST" action="{{ route('login') }}" class="bg-light p-5 rounded shadow w-100" style="max-width: 400px;">
+        <h1 class="text-center text-danger mb-4 display-6">Log In</h1>
         @csrf
-        <label for="">Name
-            <input name="name" placeholder="Name" required
-               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </label>
-        
-        <label for="">Email
-            <input name="email" type="email" placeholder="Email" required
-               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </label>
-        
-        <label for="">Password
-            <input name="password" type="password" placeholder="Password" required
-               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </label>
-        
-        
-        <button type="submit"
-                class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200 border border-blue-600">
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input name="name" placeholder="Name" required class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input name="email" type="email" placeholder="Email" required class="form-control">
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Password</label>
+            <input name="password" type="password" placeholder="Password" required class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
             Login
         </button>
     </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

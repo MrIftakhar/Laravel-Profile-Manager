@@ -22,7 +22,7 @@
 </head>
 <body>
 
-    <h1>Welcome to Task Manager</h1>
+    <h1>Welcome to Profile Manager</h1>
     <p>Please choose an option below:</p>
 
     <a href="{{ route('register') }}" class="button">Register</a>
