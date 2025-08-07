@@ -9,7 +9,7 @@
 <body class="flex justify-center bg-gray-500">
 
     <div class="bg-blue-100 p-8 rounded shadow-md w-full  text-center">
-        <h2 class="text-3xl text-green-400 font-semibold mb-6">Edit Task</h2>
+        <h2 class="text-3xl text-green-400 font-semibold mb-6">Edit</h2>
 
         <form method="POST" action="{{ route('tasks.update', $task->id) }}" enctype="multipart/form-data" class="space-y-4">
             @csrf
