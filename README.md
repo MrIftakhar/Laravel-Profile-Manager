@@ -1,6 +1,6 @@
-# 🗂️ Laravel Profile Manager with Authentication, Tailwind CSS & Image Upload
+# 🗂️ Laravel Profile Manager with Authentication, Bootstrap & Image Upload
 
-This is a simple Task Management Web Application built with **Laravel**, **MySQL**, and **Tailwind CSS**. It features **user authentication**, a secure **dashboard**, and the ability to **create profile with image uploads**.
+This is a simple Profile Management Web Application built with **Laravel**, **MySQL**, and **Bootstrap**. It features **user authentication**, a secure **dashboard**, and the ability to **create profile with image uploads**.
 
 ---
 
@@ -10,7 +10,7 @@ This is a simple Task Management Web Application built with **Laravel**, **MySQL
 - 🔐 Authenticated Dashboard (protected via middleware)
 - 📝 Create and View profiles
 - 🖼️ Upload and display images
-- 🎨 Clean and responsive UI using Tailwind CSS
+- 🎨 Clean and responsive UI using Bootstrap
 - 📦 Store images using Laravel's storage system
 - 🔓 Logout functionality
 
@@ -21,7 +21,7 @@ This is a simple Task Management Web Application built with **Laravel**, **MySQL
 - **Laravel 10+**
 - **PHP 8+**
 - **MySQL**
-- **Tailwind CSS**
+- **Bootstrap**
 - **Blade Templating Engine**
 
 ---
@@ -33,7 +33,8 @@ This is a simple Task Management Web Application built with **Laravel**, **MySQL
 - PHP 8+
 - Composer
 - MySQL
-- Node.js & npm (for Tailwind)
+- Node.js & npm
+- Bootstrap
 - Laravel CLI
 
 ### Steps
